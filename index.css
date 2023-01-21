@@ -1,6 +1,4 @@
-/* --------------------------------------- */
 /* ----- Basic Setup ----- */
-/* --------------------------------------- */
 
 @font-face {
     font-family: 'Space Grotesk';
@@ -29,7 +27,6 @@
 
     --black: #000;
     --orange: #ff7349;
-    --white: #f0e9f2;
     --white-1: #f0f0f0;
 
 
@@ -108,9 +105,7 @@ img {
     max-width: 100%;
 }
 
-/* --------------------------------------- */
 /* ----- Headlines and Paragraphs ----- */
-/* --------------------------------------- */
 
 h1,
 h2,
@@ -176,9 +171,7 @@ p {
     }
 }
 
-/* --------------------------------------- */
 /* ----- Buttons and Links ----- */
-/* --------------------------------------- */
 
 a {
     color: var(--black);
@@ -188,111 +181,15 @@ a {
     outline: 2px solid transparent;
 }
 
-::-moz-focus-inner {
-    border: 0;
-}
-
-button:focus,
 a:focus {
     outline: 2px solid var(--orange);
 }
 
-body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) a:focus {
     outline: none;
 }
 
-.link:hover {
-    color: var(--orange);
-}
-
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: 1rem 4.2rem;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid  var(--orange);
-    font-weight: 400;
-}
-
-.btn:focus {
-    outline: none;
-}
-
-.btn::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 100%;
-    background: var(--black);
-    height: 100%;
-    z-index: -1;
-    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
-}
-
-.btn:hover::after,
-.btn:focus::after {
-    right: 0;
-    background: var(--orange);
-}
-
-.btn--orange {
-    background: var(--orange);
-    transition: all 0.2s;
-}
-
-.btn--orange::after {
-    display: none;
-}
-
-.btn--orange:hover,
-.btn--orange:focus {
-    background: transparent;
-}
-
-.link__text {
-    position: relative;
-    display: inline-block;
-    padding: .6rem;
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid var(--orange);
-}
-
-.link__text::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 100%;
-    background: var(--black);
-    height: 100%;
-    z-index: -1;
-    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
-}
-
-.link__text:focus {
-    outline: none;
-}
-
-.link__text:hover::after,
-.link__text:focus:after {
-    right: 0;
-    background: var(--orange);
-}
-
-.link__text span {
-    padding-left: 1rem;
-    font-family: sans-serif;
-}
-
-/* --------------------------------------- */
 /* ----- Navigation ----- */
-/* --------------------------------------- */
 
 .nav {
     display: flex;
@@ -370,9 +267,7 @@ br {
     background: var(--orange);
 }
 
-/* --------------------------------------- */
 /* ----- Header ----- */
-/* --------------------------------------- */
 
 .header {
     background: var(--white-1);
@@ -406,18 +301,36 @@ br {
     }
 }
 
-/* --------------------------------------- */
 /* ----- Work ----- */
-/* --------------------------------------- */
 
 .work__box {
+    margin-top: 24px;
     display: flex;
-    align-items: center;
+    align-items: top;
 }
 
 .work__box__text:hover{
     color:var(--orange);
     
+}
+.work__box1 {
+    margin-top: 24px;
+    display: flex;
+    align-items: top;
+}
+.work__box1:hover img{
+    transition: all 0.25s ease-in-out;
+    transform: scale(1.05);
+}
+.work__box1:hover p{
+    color:var(--orange);
+}
+
+.work__box1:hover h3{
+    color:var(--orange);
+}
+.work__box1:hover li{
+    color:var(--orange);
 }
 
 @media(max-width: 900px) {
@@ -437,33 +350,15 @@ br {
     }
 }
 
-.work__links {
-    display: flex;
-    align-items: center;
-}
-
 .work__text {
     flex: 0 0 30%;
 }
 
-.work__list {
-    /* list-style-type: square; */
-    list-style-position: inside;
-    margin-bottom: var(--gutter-normal);
-}
-
-.work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
-}
-
-.work__code:hover {
-    transform: scale(1.2);
-}
-
 .work__image-box {
+    margin-bottom: var(--gutter-normal);
+    overflow: hidden; 
+}
+.work__image-box1 {
     margin-bottom: var(--gutter-normal);
     overflow: hidden; 
 }
@@ -477,6 +372,10 @@ br {
         flex: 1;
         margin: 0 0 0 10rem;
     }
+    .work__image-box1 {
+        flex: 1;
+        margin: 0 0 0 10rem;
+    }
 }
 
 @media(max-width: 900px) {
@@ -485,9 +384,7 @@ br {
     }
 }
 
-/* --------------------------------------- */
 /* ----- About ----- */
-/* --------------------------------------- */
 
 .about__content {
     display: flex;
